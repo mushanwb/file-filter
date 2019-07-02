@@ -40,19 +40,5 @@ public class FileFilter {
         return names;
 
     }
-//    static class FilefilterVistor extends SimpleFileVisitor<Path> {
-//        private String extension;
-//        private List<String> filterName = new ArrayList<>();
-//
-//        public FilefilterVistor(String extension) {
-//            this.extension = extension;
-//        }
-//
-//        public List<String> getFilterName() {
-//            return filterName;
-//        }
-//
-//
-//    }
 }
 
