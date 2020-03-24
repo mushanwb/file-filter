@@ -17,10 +17,10 @@ public class FileFilterTest {
                         .resolve("test-root");
         Assertions.assertEquals(
                 asSet("1.txt", "5.txt", "6.txt"),
-                new HashSet<>(FileFillter.filter(testPath, ".txt")));
+                new HashSet<>(FileFilter.filter(testPath, ".txt")));
         Assertions.assertEquals(
                 asSet("2.csv", "3.csv", "4.csv", "7.csv"),
-                new HashSet<>(FileFillter.filter(testPath, ".csv")));
+                new HashSet<>(FileFilter.filter(testPath, ".csv")));
     }
 
     private Set<String> asSet(String... elements) {
