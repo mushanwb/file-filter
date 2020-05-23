@@ -22,16 +22,16 @@ public class FileFilter {
      * 实现一个按照扩展名过滤文件的功能
      *
      * @param rootDirectory 要过滤的文件夹
-     * @param extension 要过滤的文件扩展名，例如 .txt
+     * @param extension     要过滤的文件扩展名，例如 .txt
      * @return 所有该文件夹（及其后代子文件夹中）匹配指定扩展名的文件的名字
      */
     public static List<String> filter(Path rootDirectory, String extension) throws IOException {
         List<String> results = new ArrayList<>();
-        Files.walkFileTree(rootDirectory, new SimpleFileVisitor<Path>(){
+        Files.walkFileTree(rootDirectory, new SimpleFileVisitor<Path>() {
 
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                if(file.getFileName().toString().endsWith(extension)) {
+                if (file.getFileName().toString().endsWith(extension)) {
                     results.add(file.getFileName().toString());
                 }
                 return super.visitFile(file, attrs);
